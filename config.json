@@ -1,0 +1,32 @@
+{
+  "email": {
+    "sender": "gongolf444@gmail.com",
+    "app_password": "pbfyeczsmepwopys",
+    "receiver": "gongolf444@gmail.com",
+    "smtp_host": "smtp.gmail.com",
+    "smtp_port": 465
+  },
+  "monitor": {
+    "audit_interval": 3,
+    "yolo_confidence": 0.4,
+    "alert_cooldown_seconds": 60,
+    "model_path": "yolov8n.pt"
+  },
+  "security_policies": {
+    "HIGH": [
+      "password", "passwd", "sudo", "root@",
+      "chmod 777", "rm -rf", "exec", "eval",
+      "base64_decode", "shell_exec", "DROP TABLE",
+      "SELECT \\* FROM", "UNION SELECT", "1=1"
+    ],
+    "MEDIUM": [
+      "admin/", "unauthorized", "access denied",
+      "powershell", "cmd.exe", "wget http",
+      "curl http", "nc -e", "nmap", "metasploit"
+    ],
+    "LOW": [
+      "login", "username", "token", "api_key",
+      "secret", "credential"
+    ]
+  }
+}
