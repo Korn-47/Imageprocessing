@@ -1,11 +1,5 @@
 {
-  "email": {
-    "sender": "gongolf444@gmail.com",
-    "app_password": "injudywfdnfxtuev",
-    "receiver": "gongolf444@gmail.com",
-    "smtp_host": "smtp.gmail.com",
-    "smtp_port": 465
-  },
+  
   "monitor": {
     "audit_interval": 3,
     "yolo_confidence": 0.4,

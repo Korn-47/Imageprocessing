@@ -54,21 +54,17 @@ print("[INFO] CLIP model loaded successfully")
 # =========================================================
 # EMAIL CONFIG
 # =========================================================
-# IMPORTANT:
-# Replace app_password with your NEW Gmail App Password
+# Read from environment variables (.env file)
 # =========================================================
+from dotenv import load_model, load_dotenv
+load_dotenv()
 
 EMAIL_CONFIG = {
-
-    "sender": "gongolf444@gmail.com",
-
-    "app_password": "injudywfdnfxtuev",
-
-    "receiver": "gongolf444@gmail.com",
-
-    "smtp_host": "smtp.gmail.com",
-
-    "smtp_port": 587
+    "sender": os.getenv("EMAIL_SENDER", "gongolf444@gmail.com"),
+    "app_password": os.getenv("EMAIL_APP_PASSWORD", ""),
+    "receiver": os.getenv("EMAIL_RECEIVER", "gongolf444@gmail.com"),
+    "smtp_host": os.getenv("EMAIL_SMTP_HOST", "smtp.gmail.com"),
+    "smtp_port": int(os.getenv("EMAIL_SMTP_PORT", 587))
 }
 
 # =========================================================
